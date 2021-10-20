@@ -2,7 +2,7 @@
 import numpy as np
 import json
 
-DATASET_PATH ='Datasets/simplificationdataset.json'
+DATASET_PATH ='Datasets\summarizedataset.json'
 
 with open(DATASET_PATH,'r') as f:
     d = json.load(f)
@@ -35,8 +35,5 @@ for j in range(NR_OF_PROMPTS):
     SOURCE_SENTENCE = generateRandomPrompt()
     print(str(NR_OF_EXAMPLES+1) + '. Summarize:',SOURCE_SENTENCE[0])
     print('\n------\n')
-
-
-
 
 
