@@ -12,7 +12,7 @@ import json
 # give a lot of synonyms from the legal system. Recomended subject is text
 # The datafile variable includes the path to the dataset used
 subject = 'text'
-datafile = 'yelpdata.json'
+datafile = 'Datasets\sentimentdata.json'
 
 #Load dataset
 with open(datafile,'r') as f:
@@ -82,5 +82,5 @@ def ShowExamples(numofex, dataset, subject):
 
 #Run ShowExamples to get a list of prompts with answers and a last prompt without an answer. Insert nuber of prompts with answers,
 #which dataset to use and which kind of media the answer is. The subject could for example be text or review.
-ShowExamples(3, dataset, subject)
+ShowExamples(4, dataset, subject)
 
