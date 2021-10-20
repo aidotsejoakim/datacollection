@@ -12,7 +12,7 @@ import json
 # give a lot of synonyms from the legal system. Recomended subject is text
 # The datafile variable includes the path to the dataset used
 subject = 'text'
-datafile = 'Datasets\sentimentdata.json'
+datafile = 'Datasets\goEmotionsDataset.json'
 
 #Load dataset
 with open(datafile,'r') as f:
