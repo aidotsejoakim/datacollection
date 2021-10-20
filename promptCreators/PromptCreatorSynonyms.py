@@ -12,10 +12,10 @@ import json
 # give a lot of synonyms from the legal system. Recomended subject is text
 # The datafile variable includes the path to the dataset used
 subject = 'text'
-datafile = 'data.json'
+datafile = 'yelpdata.json'
 
 #Load dataset
-with open('data.json','r') as f:
+with open(datafile,'r') as f:
     d = json.load(f)
 dataset = Dataset.from_dict(d)
 
@@ -59,26 +59,28 @@ def GenerateSentence(grade, subject):
   return sentence
 
 #use Generate sentance to create prompts based on the labels in the dataset
-def PromptsFromDataset(dataset, text_type):
+def PromptsFromDataset(numofex, dataset, text_type):
   prompts_list = []
-  for label in dataset['text']:
+  label_list = []
+  for i in range(numofex):
+    idx = random.randint(0,len(dataset['text']))
+    label = dataset['text'][idx]
     prompts = GenerateSentence(label,text_type)
     prompts_list.append(prompts)
+    label_list.append(dataset['label'][idx])
   
-  return prompts_list, dataset['label']
+  return prompts_list, label_list
 
 def ShowExamples(numofex, dataset, subject):
   x = 1
-  prompts, answers = PromptsFromDataset(dataset, subject)
-  for i in range(numofex):
-    randomplace = random.randint(0,len(prompts))
-    print(str(i+1) + '. <'+ prompts[randomplace] + '>\n' + answers[randomplace] + '\n')
+  prompts, answers = PromptsFromDataset(numofex, dataset, subject)
+  for i in range(len(prompts)-1):
+    print(str(i+1) + '. <'+ prompts[i] + '>\n' + answers[i] + '\n')
     x +=1
-  print(str(x) + '. <'+ prompts[random.randint(0,len(prompts))] + '>')
+  print(str(x) + '. <'+ prompts[-1] + '>')
 
 
 #Run ShowExamples to get a list of prompts with answers and a last prompt without an answer. Insert nuber of prompts with answers,
 #which dataset to use and which kind of media the answer is. The subject could for example be text or review.
 ShowExamples(3, dataset, subject)
-
 
