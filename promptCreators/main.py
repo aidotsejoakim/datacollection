@@ -27,6 +27,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
     '''
     dataset = loadDataset(path)
     DATASET_LENGTH = len(dataset['dataset']['text'])
+    prompt_structure= dataset['prompt_structure']
 
     for i in range(nrOfPrompts):
         INDEX = selectRandomIndex()
@@ -63,5 +64,5 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
         print('\n------')
 
 
-generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/imdbdataset.json')
+generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/sentimentdata.json')
 
