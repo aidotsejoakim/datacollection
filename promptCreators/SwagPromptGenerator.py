@@ -16,21 +16,21 @@ class prompt_generator():
     selected_num = []
 
     for _ in range(0, examples_per_prompt):  
-      all_num = list(range(len(self.data["text"])))
+      all_num = list(range(len(self.data["dataset"]["text"])))
       allowed_num = [x for x in all_num if x not in selected_num]
       num = random.choice(allowed_num)
       selected_num.append(num)
 
       sentence = self.generate_words()
 
-      prompt += sentence + self.data["text"][num] + "\n"
-      prompt += self.data["label"][num] + "\n\n"
+      prompt += sentence + self.data["dataset"]["text"][num] + "\n"
+      prompt += self.data["dataset"]["label"][num] + "\n\n"
 
     num = random.choice(allowed_num)
 
     sentence = self.generate_words()
 
-    prompt += sentence + self.data["text"][num]
+    prompt += sentence + self.data["dataset"]["text"][num]
 
     return prompt
 
