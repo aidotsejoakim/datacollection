@@ -87,7 +87,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
                 if part == 'part2':
                     
                     if prompt_structure[part] == 'USE_LABEL':
-                            targetInstruction += SENTIMENT
+                            targetInstruction += INSTRUCTION_SENTIMENT
                     else: 
                         targetInstruction += np.random.choice(prompt_structure[part][INSTRUCTION_SENTIMENT])
                 else: 
@@ -98,7 +98,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             print('\n------')
 
 
-generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/goEmotionsDataset.json')
+generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
 
