@@ -79,6 +79,6 @@ words = {
   ]
 }
 
-generator = prompt_generator("swag.json", words)
+generator = prompt_generator("Datasets/swag.json", words)
 
 print(generator.generate_prompt())
