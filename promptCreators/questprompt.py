@@ -1,6 +1,6 @@
 from numpy import random
 
-def prompt(count, dictionary):
+def qnaprompt(count, dictionary):
   string = ''
   for i in range(count):
     index = random.randint(len(dictionary['label']))
