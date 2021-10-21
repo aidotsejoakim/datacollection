@@ -70,7 +70,12 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
                         else: 
                             instruction += np.random.choice(prompt_structure[part][SENTIMENT])
                     else: 
-                        instruction += np.random.choice(prompt_structure[part]) 
+                        instruction += np.random.choice(prompt_structure[part])
+
+                if np.random.choice([0, 1]) == 1:
+                    instruction = instruction[0].upper() + instruction[1:]
+                else:
+                    instruction = instruction[0].lower() + instruction[1:]
 
                 print(INDEX[j] + START + instruction + MIDDLE  + SENTENCE +'\n')
                     
@@ -93,7 +98,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             print('\n------')
 
 
-generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/GigawordDataset3.json')
+generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/goEmotionsDataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
 
