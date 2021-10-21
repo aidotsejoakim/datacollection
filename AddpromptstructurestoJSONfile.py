@@ -1,5 +1,6 @@
 import json
 
+<<<<<<< Updated upstream
 filename = "Datasets\summarizedataset.json"
 # python object(dictionary) to be dumped
 prompt_structure:dict = {
@@ -12,6 +13,15 @@ prompt_structure:dict = {
         #     "fear": ('a scarred', 'a fearful', 'a'),
         #     "surprise": ('a surpised', 'unexpected', 'a'),
         # },
+=======
+filename = "GigawordDataset2.json"
+# python object(dictionary) to be dumped
+prompt_structure:dict = {
+        "part1": ('Write ', 'Make ', 'This is ', 'Create ', 'Show me ', 'Display ', 'Print ', 'Reveal ', 'Reaveal to me ', 'Get me ', 'May I a have ', 'Could i have ', 'Can you give to me ', 'Please show me '),
+        "part2": {
+            "USE_LABEL"
+        }
+>>>>>>> Stashed changes
         # "part3": (' sentence', ' statement', ' piece of text', ' quote', ' citation')
     }
 
