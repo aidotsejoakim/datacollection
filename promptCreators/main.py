@@ -87,7 +87,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
                 if part == 'part2':
                     
                     if prompt_structure[part] == 'USE_LABEL':
-                            targetInstruction += SENTIMENT
+                            targetInstruction += INSTRUCTION_SENTIMENT
                     else: 
                         targetInstruction += np.random.choice(prompt_structure[part][INSTRUCTION_SENTIMENT])
                 else: 
