@@ -94,11 +94,11 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
                     targetInstruction += np.random.choice(prompt_structure[part]) 
                     
 
-            print(INDEX[nrOfExamples+1] + START  + targetInstruction)
+            print(INDEX[nrOfExamples] + START  + targetInstruction)
             print('\n------')
 
 
-generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/hellaswag.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=3,path='Datasets/hellaswag.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
 
