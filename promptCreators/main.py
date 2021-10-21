@@ -98,7 +98,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             print('\n------')
 
 
-generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/goEmotionsDataset.json')
+generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/app_reviews.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
 
