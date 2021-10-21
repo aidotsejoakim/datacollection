@@ -20,7 +20,7 @@ with open(filename, "r") as file:
     data = json.load(file)
 
 _dataset = {
-    'prompt_strucutre': prompt_structure,
+    'prompt_structure': prompt_structure,
     'dataset': data
 }
 
