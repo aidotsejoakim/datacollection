@@ -45,7 +45,9 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
     else: 
         prompt_structure = dataset['prompt_structure']
         DATASET_LENGTH = len(dataset['dataset']['text'])
-
+        ADDITIONAL_SENTENCE = False
+        if 'addin' in dataset['prompt_structure'].keys():
+            ADDITIONAL_SENTENCE = dataset['prompt_structure']['addin']
         for i in range(nrOfPrompts):
             INDEX = selectRandomIndex()
             START = np.random.choice(list_structure['start'])
@@ -55,6 +57,10 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             for j in range(nrOfExamples):   
                 instruction = ''   
                 RANDOM_ROW = np.random.randint(DATASET_LENGTH)
+                if ADDITIONAL_SENTENCE != False:
+                    ADDITIONAL = dataset['dataset'][ADDITIONAL_SENTENCE][RANDOM_ROW] + MIDDLE
+                else:
+                    ADDITIONAL = ""
                 SENTIMENT = dataset['dataset']['text'][RANDOM_ROW]
                 SENTENCE = dataset['dataset']['label'][RANDOM_ROW]
 
@@ -64,6 +70,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
 
 
                 for part in prompt_structure:
+                    if part == "addin": continue
                     if (part == 'part2'):
                         if prompt_structure[part] == 'USE_LABEL':
                             instruction += SENTIMENT
@@ -77,13 +84,17 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
                 else:
                     instruction = instruction[0].lower() + instruction[1:]
 
-                print(INDEX[j] + START + instruction + MIDDLE  + SENTENCE +'\n')
+                print(INDEX[j] + START + ADDITIONAL + instruction + MIDDLE  + SENTENCE +'\n')
                     
             targetInstruction = ''   
             RANDOM_ROW_INSTRUCTION = np.random.randint(DATASET_LENGTH)
             INSTRUCTION_SENTIMENT = dataset['dataset']['text'][RANDOM_ROW_INSTRUCTION]
+            INSTRUCTION_ADDITIONAL = ""
+            if ADDITIONAL_SENTENCE != False:
+                INSTRUCTION_ADDITIONAL = dataset['dataset'][ADDITIONAL_SENTENCE][RANDOM_ROW_INSTRUCTION]
 
             for part in prompt_structure:
+                if part == "addin": continue
                 if part == 'part2':
                     
                     if prompt_structure[part] == 'USE_LABEL':
@@ -94,11 +105,12 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
                     targetInstruction += np.random.choice(prompt_structure[part]) 
                     
 
-            print(INDEX[nrOfExamples] + START  + targetInstruction)
+            print(INDEX[nrOfExamples]  + START  +INSTRUCTION_ADDITIONAL+ targetInstruction)
             print('\n------')
 
 
 generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/scidocsdataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
+#generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets\contradictions.json')
 
