@@ -109,7 +109,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             print('\n------')
 
 
-generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/corpusdataset.json')
+generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/scidocsdataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
 #generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets\contradictions.json')
