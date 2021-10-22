@@ -11,20 +11,18 @@ This folder includes json-files with data. The data should include a label and a
 [Google colab link for a dataset containing 5,6 million examples of text to title, bier climatefever](4/1AX4XfWjh1-YTpCjkQd2pqExxWSRHNqZxsd0ECmV7xTT8nk0J43VJyYj0xMc)
 
 This is the number of datapoints in each dataset produced by countJsonFiles.py:<br />
-Could not read: app_reviews.json<br />
-Could not read: contradictions.json<br />
+app_reviews.json:     288065<br />
+contradictions.json:     570152<br />
 corpusdataset.json:     3633<br />
 cosmosqadataset.json:     35210<br />
-Could not read: emotion_dataset.json<br />
-Could not read: GigawordDataset4.json<br />
-Could not read: goEmotionsDataset.json<br />
-Could not read: hellaswag.json<br />
-Could not read: imdbdataset.json<br />
+GigawordDataset4.json:     150000<br />
+goEmotionsDataset.json:     43410<br />
+hellaswag.json:     49947<br />
 piqadataset.json:     21035<br />
 quest.json:     87599<br />
-Could not read: sentimentdata.json<br />
-Could not read: summarizedataset.json<br />
-Could not read: swag.json<br />
+sentimentdata.json:     16000<br />
+summarizedataset.json:     4936<br />
+swag.json:     93552<br />
 winogrande.json:     40398<br />
 
 Feel free to fill in the blanks :smiley:
