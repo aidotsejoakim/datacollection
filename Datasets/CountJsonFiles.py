@@ -11,8 +11,17 @@ print(json_files)
 
 for file in json_files:
     with open(file, 'r') as file:
+        
+        data = json.load(file)
         try:
-            data = json.load(file)
             print(file.name + ":     " + str(len(data['label'])))
+        except: 
+            pass
+        try:
+            print(file.name + ":     " + str(len(data['dataset']['label'])))
         except:
-            print("Could not read: " + file.name)
+            pass
+        try:
+            print(file.name + ":     " + str(len(data['dataset']['train']['label'])) + len(data['dataset']['test']['label'] + len(data['dataset']['test']['label'])))
+        except:
+            pass
