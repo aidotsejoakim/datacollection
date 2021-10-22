@@ -98,11 +98,7 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             print('\n------')
 
 
-<<<<<<< Updated upstream
-generatePrompts(nrOfExamples=3,nrOfPrompts=3,path='Datasets/hellaswag.json')
-=======
 generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/corpusdataset.json')
->>>>>>> Stashed changes
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
 # generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
 
