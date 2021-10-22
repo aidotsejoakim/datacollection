@@ -10,22 +10,22 @@ This folder includes json-files with data. The data should include a label and a
 
 [Google colab link for a dataset containing 5,6 million examples of text to title, bier climatefever](4/1AX4XfWjh1-YTpCjkQd2pqExxWSRHNqZxsd0ECmV7xTT8nk0J43VJyYj0xMc)
 
-This is the number of datapoints in each dataset produced by countJsonFiles.py:
-Could not read: app_reviews.json\n
-Could not read: contradictions.json\n
-corpusdataset.json:     3633\n
-cosmosqadataset.json:     35210
-Could not read: emotion_dataset.json
-Could not read: GigawordDataset4.json
-Could not read: goEmotionsDataset.json
-Could not read: hellaswag.json
-Could not read: imdbdataset.json
-piqadataset.json:     21035
-quest.json:     87599
-Could not read: sentimentdata.json
-Could not read: summarizedataset.json
-Could not read: swag.json
-winogrande.json:     40398
+This is the number of datapoints in each dataset produced by countJsonFiles.py:<br />
+Could not read: app_reviews.json<br />
+Could not read: contradictions.json<br />
+corpusdataset.json:     3633<br />
+cosmosqadataset.json:     35210<br />
+Could not read: emotion_dataset.json<br />
+Could not read: GigawordDataset4.json<br />
+Could not read: goEmotionsDataset.json<br />
+Could not read: hellaswag.json<br />
+Could not read: imdbdataset.json<br />
+piqadataset.json:     21035<br />
+quest.json:     87599<br />
+Could not read: sentimentdata.json<br />
+Could not read: summarizedataset.json<br />
+Could not read: swag.json<br />
+winogrande.json:     40398<br />
 
 Feel free to fill in the blanks (:
 
