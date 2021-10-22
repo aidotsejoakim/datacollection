@@ -10,6 +10,25 @@ This folder includes json-files with data. The data should include a label and a
 
 [Google colab link for a dataset containing 5,6 million examples of text to title, bier climatefever](4/1AX4XfWjh1-YTpCjkQd2pqExxWSRHNqZxsd0ECmV7xTT8nk0J43VJyYj0xMc)
 
+This is the number of datapoints in each dataset produced by countJsonFiles.py:
+Could not read: app_reviews.json
+Could not read: contradictions.json
+corpusdataset.json:     3633
+cosmosqadataset.json:     35210
+Could not read: emotion_dataset.json
+Could not read: GigawordDataset4.json
+Could not read: goEmotionsDataset.json
+Could not read: hellaswag.json
+Could not read: imdbdataset.json
+piqadataset.json:     21035
+quest.json:     87599
+Could not read: sentimentdata.json
+Could not read: summarizedataset.json
+Could not read: swag.json
+winogrande.json:     40398
+
+Feel free to fill in the blanks (:.
+
 ### promptCreators
 Includes code used to create prompts. It generates sentences which is used to create more data. There are thousands of ways to say that you want a positive movie review, which means that we can use the same data more times if we connect it to different ways of calling on that data. 
 
