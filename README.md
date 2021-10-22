@@ -18,8 +18,10 @@ cosmosqadataset.json:     35210<br />
 GigawordDataset4.json:     150000<br />
 goEmotionsDataset.json:     43410<br />
 hellaswag.json:     49947<br />
+imdbdataset.json:     50000<br />
 piqadataset.json:     21035<br />
 quest.json:     87599<br />
+scidocsdataset.json:     25657<br />
 sentimentdata.json:     16000<br />
 summarizedataset.json:     4936<br />
 swag.json:     93552<br />
