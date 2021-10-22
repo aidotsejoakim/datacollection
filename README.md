@@ -27,7 +27,7 @@ Could not read: summarizedataset.json<br />
 Could not read: swag.json<br />
 winogrande.json:     40398<br />
 
-Feel free to fill in the blanks :relaxed:
+Feel free to fill in the blanks :smiley:
 
 ### promptCreators
 Includes code used to create prompts. It generates sentences which is used to create more data. There are thousands of ways to say that you want a positive movie review, which means that we can use the same data more times if we connect it to different ways of calling on that data. 
