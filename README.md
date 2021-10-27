@@ -8,7 +8,7 @@ This folder includes json-files with data. The data should include a label and a
 
 [Google colab link for a dataset containing 560 000 yelp-reviews](https://drive.google.com/file/d/1QfiY0svqTVS2XIK5jyDA2FNweLaSffPK/view?usp=sharing)
 
-[Google colab link for a dataset containing 5,6 million examples of text to title, bier climatefever](4/1AX4XfWjh1-YTpCjkQd2pqExxWSRHNqZxsd0ECmV7xTT8nk0J43VJyYj0xMc)
+[Google colab link for a dataset containing 5,6 million examples of text to title, bier climatefever](4/1AX4XfWjh1-YTpCjkQd2pqExxWSRHNqZxsd0ECmV7xTT8nk0J43VJyYj0xMc)<br />
 We are not sure if this works with the main dataset, it was slightly to big for our computers.
 
 This is the number of datapoints in each dataset produced by countJsonFiles.py:<br />
