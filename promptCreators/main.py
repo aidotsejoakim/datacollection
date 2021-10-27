@@ -109,8 +109,21 @@ def generatePrompts(nrOfExamples, nrOfPrompts, path):
             print('\n------')
 
 
-generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets/scidocsdataset.json')
-# generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/summarizedataset.json')
-# generatePrompts(nrOfExamples=1,nrOfPrompts=1,path='Datasets/quest.json')
-#generatePrompts(nrOfExamples=4,nrOfPrompts=2,path='Datasets\contradictions.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/app_reviews.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/contradictions.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/corpusdataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets\cosmosqadataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/emotion_dataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/GigawordDataset4.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/goEmotionsDataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets\hellaswag.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/imdbdataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/piqadataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/quest.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets\scidocsdataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/sentimentdata.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/summarizedataset.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets/swag.json')
+generatePrompts(nrOfExamples=3,nrOfPrompts=2,path='Datasets\winogrande.json')
+
 
