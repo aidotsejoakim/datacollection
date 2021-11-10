@@ -16,7 +16,7 @@ if __name__ == "__main__":
         "part2": {
             "sad": ('a sad', 'an unhappy', 'a depressed', 'a sorrowful', 'a', 'a not so happy', 'an unglad', 'a not glad', 'melancholic'),
             "joy": ('a happy', 'a joyful', 'a glad', 'a delightful', 'a', 'a gleefull'),
-            "love": ('a', ),
+            "love": ('a', 'a romantic', 'a love filled'),
             "anger": ('a sad', 'an unhappy', 'a depressed', 'a sorrowful', 'a', 'a not so happy', 'an unglad', 'a not glad', 'melancholic'),
             "fear": ('a scarred', 'a fearful', 'a'),
             "surprise": ('a surpised', 'unexpected', 'a')
@@ -42,10 +42,10 @@ if __name__ == "__main__":
         "part2": ('a article ', 'a news article '),
         "part3": ('regarding ', 'containing ', 'about '),
         "part4": {
-            "World": ('world', 'worlds', 'anything', 'something'),
+            "World": ('the world', 'anything', 'something'),
             "Sports": ('sports', 'sport', 'anything', 'something'),
             "Business": ('business', 'anything', 'something'),
-            "Sci/Tech": ('sci/tech', 'sci', 'tech', 'anything', 'something')
+            "Sci/Tech": ('sci/tech', 'sci', 'tech', 'technology', 'scify', 'anything', 'something')
         }
     }
     Save()
@@ -58,9 +58,24 @@ if __name__ == "__main__":
     prompt_structure:dict = {
         "part1": ('Write ', 'Make ', 'This is ', 'Create ', 'Show me ', 'Display ', 'Print ', 'Reveal ', 'Reaveal to me ', 'Get me ', 'May I a have ', 'Could i have ', 'Can you give to me ', 'Please show me '),
         "part2": {
-            "Negative": ('a negative ', ),
-            "Positive": ('a positive ', ),
+            "Negative": ('a negative', 'a hurtfull', 'a destructive'),
+            "Positive": ('a positive', 'a progressive', 'an affirmative', 'a constructive', 'a practical'),
         },
-        "part3": ('review', ),
+        "part3": (' review', ),
+    }
+    Save()
+
+    # Name of huggingface dataset
+    dataset_name:str = "kan_hope"
+    # Labels for our dataset
+    labels:tuple = ("NoneHope", "Hope")
+    # Holds structure for prompts
+    prompt_structure:dict = {
+        "part1": ('Write ', 'Make ', 'This is ', 'Create ', 'Show me ', 'Display ', 'Print ', 'Reveal ', 'Reaveal to me ', 'Get me ', 'May I a have ', 'Could i have ', 'Can you give to me ', 'Please show me '),
+        "part2": {
+            "NoneHope": ('a hopeless', 'a helpless', 'a pointless', 'a tragic'),
+            "Hope": ('a hopeful', 'a cheerful', 'an enthusiastic', 'a upbeat'),
+        },
+        "part3": (' speech', ' conversation', ' discussion', ' dialogue'),
     }
     Save()
